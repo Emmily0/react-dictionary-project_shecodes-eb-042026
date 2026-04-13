@@ -11,8 +11,20 @@ function App() {
       <Dictionary />
     </main>
     <footer className="App-footer">
-      <small>Coded by Emily</small>
-    </footer>
+     <small> <a href="https://www.shecodes.io/" target="_blank" rel="noreferrer" 
+     title="SheCodes React Dictionary Project">SheCodes</a>
+    {" "}
+    React Project coded in April 2026 by  
+    {" "}
+        <a href="https://www.shecodes.io/graduates/15505-emily-berner" target="_blank" rel="noreferrer" 
+        title="Emily's SheCodes profile">Emily Berner</a>
+        , open-sourced on  <a href="https://github.com/Emmily0/react-dictionary-project_shecodes-eb-042026" target="_blank" rel="noreferrer" 
+        title="Emily's React Dictionary Project on GitHub">GitHub</a> 
+        {" "}
+        and hosted on  <a href="https://react-dictionary-p-shecodes-eb-042026.netlify.app/" target="_blank" rel="noreferrer" 
+        title="Emily's React Dictionary Project on Netlify">Netlify</a>. 
+        </small>
+        </footer>
     </div>
   );
 }

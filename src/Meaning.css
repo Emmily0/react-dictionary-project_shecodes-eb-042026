@@ -1,0 +1,15 @@
+.Meaning .partOfSpeech {
+    font-size: 14px;
+    color: gray;
+    margin-top: 30px;
+}
+
+.Meaning .defintion {
+    margin-left: 30px;
+}
+
+.Meaning .example {
+    margin-left: 30px;
+    font-style: italic;
+    font-size: 14px;
+}
