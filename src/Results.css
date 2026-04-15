@@ -1,3 +1,10 @@
-.Results .resultTitle {
-    margin-top: 20px;
+.Results h2 {
+    font-size: 46px;
+    font-weight: 400px;
+    line-height: 1.5;
+    font-family: "EB Garamond", serif;
+    color: #5C3E20;
+    margin-bottom: 0;
 }
+
+

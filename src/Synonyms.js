@@ -4,16 +4,19 @@ import "./Synonyms.css";
 export default function Synonyms(props) {
     if (props.synonyms) {
         return (
-            <ul className="Synonyms">
-                Synonyms:
-                {props.synonyms.map(function(synonym, index){
-                    return (
-                        <li key={index} className="listSynonyms">
+            <div className="Synonyms">
+                <div className="synonyms-title">Synonyms</div>
+                <div className="synonyms-list">
+                    {props.synonyms.map(function(synonym, index)
+                    {
+                        return (
+                            <span className="display-synonyms" key={index}>
                             {synonym}
-                        </li>
-                    );
-                })}
-            </ul>
+                            </span>
+                        );
+                    })}
+                </div>   
+            </div>
         );
     } else {
         return null;

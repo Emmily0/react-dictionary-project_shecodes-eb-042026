@@ -1,9 +1,25 @@
 .App-header {
     text-align: center;
+    color: #976736;
+    font-family: "EB Garamond", serif;
+}
+
+.App-header h1 {
+    font-size: 50px !important;
+
 }
 
 .App-footer {
     text-align: center;
     margin: 30px 0;
     font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    color: #976736;
+    font-weight: 200;
+}
+
+.App-footer a {
+    text-decoration: none;
+    color: #e68128;
+    font-weight: 300;
 }
