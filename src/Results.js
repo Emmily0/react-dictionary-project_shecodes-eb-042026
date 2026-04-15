@@ -11,7 +11,7 @@ export default function Results(props) {
 
     return (
         <div className="Results">
-            <section>
+            <section className="word-card">
                 <h2 className="resultTitle">{props.results.word}</h2>
                 <Phonetic phonetic={props.results.phonetic} />
             </section>
