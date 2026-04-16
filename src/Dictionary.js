@@ -3,6 +3,7 @@ import "./Dictionary.css";
 import axios from "axios";
 import Results from "./Results";
 import { ThreeDots } from 'react-loader-spinner';
+import booksImage from "./images/Books-image.png";
 
 
 export default function Dictionary() {
@@ -65,11 +66,15 @@ export default function Dictionary() {
     return (
         <div className="Dictionary">
             {!results && !error && !loading && (
-                <div className="empty-state">
-                    <h2 className="empty-state-title">What word would you like to look up?</h2>
-                </div>
-            )}
-
+                <div className="empty-state-wrapper">
+                    <h2 className="empty-state-title">
+                        What word would you like to look up?
+                    </h2>
+                    <p className= "empty-state-subtitle">
+                         Discover meanings, phonetics and synonyms in all in one place.
+                    </p>
+                </div>   
+            )}                
             <form onSubmit={handleSubmit}>
                 <input 
                     type="search" 
@@ -79,6 +84,16 @@ export default function Dictionary() {
                     value={keyword}
                 />
             </form>
+
+            {!results && !error && !loading && (
+                <div className="empty-state-visual"> 
+                    <img
+                    src={booksImage}
+                    alt="Stack of books"
+                    className="empty-state-books"
+                    />
+                </div>
+            )}
 
             {loading && (
             <div className="loading">

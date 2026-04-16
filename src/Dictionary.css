@@ -3,12 +3,75 @@
     font-family: "Roboto", sans-serif;
 }
 
-.Dictionary .empty-state-title {
+.Dictionary .empty-state-wrapper {
     text-align: center;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.Dictionary .empty-state-title {
     color: #f2994a;
     font-size: 24px;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin: 0;
+}
+
+.Dictionary .empty-state-subtitle {
+    margin: 10px 0 0;
+    color: #976736;
+    font-size: 15px;
+    opacity: 0.75;
+}
+
+.Dictionary form {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #e6d8c8;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: inset 0 4px 4px rgba(151, 103, 54, 0.06);
+    transition: all 0.2s ease;
+}
+
+.Dictionary form:focus-within {
+    border: 1px solid #e68128; 
+    box-shadow: 
+    inset 0 4px 4px rgba(151, 103, 54, 0.06);
+}
+
+.Dictionary input {
+    color: #976736;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 8px 15px;
+    width: 100%;
+    line-height: 1.2;
+    -webkit-text-fill-color: #976736;
+    caret-color: #f2994a;
+}
+
+.Dictionary input::placeholder {
+    color: #976736;
+    opacity: 1;
+}
+
+.Dictionary .empty-state-visual {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto 0;
+}
+
+.Dictionary .empty-state-books {
+    width: 220px;
+    margin-left: 0;
+    display: block;    
+    opacity: 0.95;
 }
 
 .Dictionary .loading {
@@ -32,42 +95,6 @@
     font-size: 15px;
     font-weight: 400;
     opacity: 0.8;
-}
-
-.Dictionary form {
-    max-width: 1000px;
-    margin: 0 auto;
-    border: 1px solid #e6d8c8;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: inset 0 4px 4px rgba(151, 103, 54, 0.06);
-    transition: all 0.2 ease;
-}
-
-.Dictionary form:focus-within {
-    border: 1px solid #e68128; 
-    box-shadow: 
-    inset 0 4px 4px rgba(151, 103, 54, 0.06);
-}
-
-.Dictionary input {
-    color: #976736;
-    border: none;
-    outline: none;
-    box-shadow: none;
-    background: transparent;
-    font-size: 16px;
-    padding: 8px 15px;
-    width: 100%;
-    line-height: 1.2;
-    width: 100%;
-    -webkit-text-fill-color: #976736;
-    caret-color: #f2994a;
-}
-
-.Dictionary input::placeholder {
-    color: #976736;
-    opacity: 1;
 }
 
 .Dictionary .error-message {
