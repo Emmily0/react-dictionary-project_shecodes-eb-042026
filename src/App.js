@@ -23,6 +23,12 @@ function App() {
         {" "}
         and hosted on  <a href="https://react-dictionary-p-shecodes-eb-042026.netlify.app/" target="_blank" rel="noreferrer" 
         title="Emily's React Dictionary Project on Netlify">Netlify</a>. 
+        {" "}
+        <br/>
+        Dictionary data and images powered by SheCodes API.
+        {" "}
+        <br/>
+        SVG illustrations generated with AI.
         </small>
         </footer>
     </div>
