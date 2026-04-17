@@ -88,7 +88,7 @@ export default function Dictionary() {
                         What word would you like to look up?
                     </h2>
                     <p className= "empty-state-subtitle">
-                         Discover meanings, phonetics and synonyms in all in one place.
+                         Discover meanings, phonetics and synonyms all in one place.
                     </p>
                 </div>   
             )}                
