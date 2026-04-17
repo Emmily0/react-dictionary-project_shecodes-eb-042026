@@ -31,3 +31,15 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     margin-bottom: 15px;
 }
+
+@media (max-width: 768px) {
+    .Results h2 {
+        font-size: 30px;
+    }
+
+    .Results .word-card, 
+    .Results .meaning-card,
+    .Results .photos-card {
+        padding: 20px;
+    }
+}

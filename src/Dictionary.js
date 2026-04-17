@@ -92,7 +92,7 @@ export default function Dictionary() {
                     </p>
                 </div>   
             )}                
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={results ? "form-wide" : "form-narrow"}>
                 <input 
                     type="search" 
                     onChange={handleKeywordChange}

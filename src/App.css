@@ -30,3 +30,13 @@
     color: #e68128;
     font-weight: 300;
 }
+
+@media (max-width: 768px) {
+    .App {
+        padding: 20px 15px 60px;
+    }
+
+    .App-header h1 {
+        font-size: 36px !important;
+    }
+}

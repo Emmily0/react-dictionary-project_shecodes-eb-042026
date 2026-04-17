@@ -3,7 +3,7 @@ import Dictionary from "./Dictionary";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App px-3">
     <header className="App-header">
     <h1>Dictionary</h1>
     </header>
