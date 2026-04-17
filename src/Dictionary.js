@@ -98,7 +98,7 @@ export default function Dictionary() {
                     type="search" 
                     onChange={handleKeywordChange}
                     onClick={handleInputClick}
-                    placeholder="Search for a word, for example: Paris, Wine, Yoga, ..."
+                    placeholder="Search a word... e.g. Paris, Wine, Yoga"
                     value={keyword}
                 />
             
