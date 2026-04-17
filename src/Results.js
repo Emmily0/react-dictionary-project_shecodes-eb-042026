@@ -26,6 +26,7 @@ export default function Results(props) {
                 })}
 
             <section className="photos-card">
+                <h3 className="photos-title">Images</h3>
                 <Photos photos={props.photos} />
             </section>
         </div>

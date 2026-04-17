@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
 import { ThreeDots } from 'react-loader-spinner';
-import booksImage from "./images/Books-image.png";
 import "./Dictionary.css";
+import SearchIllustration from "./SearchIllustration";
 
 
 export default function Dictionary() {
@@ -93,6 +93,7 @@ export default function Dictionary() {
                 </div>   
             )}                
             <form onSubmit={handleSubmit} className={results ? "form-wide" : "form-narrow"}>
+            <div className="search-input-wrapper">
                 <input 
                     type="search" 
                     onChange={handleKeywordChange}
@@ -100,15 +101,29 @@ export default function Dictionary() {
                     placeholder="Search for a word, for example: Paris, Wine, Yoga, ..."
                     value={keyword}
                 />
+            
+            <button
+                type="submit"
+                className="search-button">
+                    <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="#976736"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                </button>
+            </div>
             </form>
 
             {!results && !error && !loading && (
                 <div className="empty-state-visual"> 
-                    <img
-                    src={booksImage}
-                    alt="Stack of books"
-                    className="empty-state-books"
-                    />
+                    <SearchIllustration />
                 </div>
             )}
 

@@ -40,6 +40,25 @@
     max-width: 100%;
 }
 
+.Dictionary .search-input-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.Dictionary .search-button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    flex-shrink: 0;
+}
+
+.Dictionary .search-button:hover {
+    opacity: 1;
+}
+
 .Dictionary form:focus-within {
     border: 1px solid #e68128; 
     box-shadow: 
@@ -70,13 +89,6 @@
     justify-content: center;
     width: 100%;
     margin: 40px auto 0;
-}
-
-.Dictionary .empty-state-books {
-    width: 180px;
-    margin-left: 0;
-    display: block;    
-    opacity: 0.85;
 }
 
 .Dictionary .loading {
