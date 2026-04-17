@@ -114,3 +114,9 @@
         font-size: 18px;
     }
 }
+
+@media (max-width: 768px) {
+    .Dictionary .error-message {
+        font-size: 16px;
+    }
+}
