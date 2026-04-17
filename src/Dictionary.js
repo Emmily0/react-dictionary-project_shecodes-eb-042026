@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./Dictionary.css";
 import axios from "axios";
 import Results from "./Results";
 import { ThreeDots } from 'react-loader-spinner';
 import booksImage from "./images/Books-image.png";
+import "./Dictionary.css";
 
 
 export default function Dictionary() {
@@ -11,44 +11,9 @@ export default function Dictionary() {
     const [keyword, setKeyword] = useState("");
     const [results, setResults] = useState(null);
     const [error, setError] = useState(false);
+    const [photos, setPhotos] = useState(null);
    
-    function handleResponse(response) {
-        if (response.data && response.data.meanings) {
-            setResults(response.data);
-            setError(false);
-        } else {
-            setResults(null);
-            setError(true);
-        }
-    }
-
-    function search() {
-        setLoading(true);
-        setResults(null);
-        setError(false);
-
-        let apiKey = "a4adbd3ete0df14f5fa9050ddd7off63";
-        let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
-
-        axios.get(apiUrl).then(function (response) {
-            handleResponse(response);
-            setLoading(false);
-        })
-        .catch(function () {
-            setResults(null);
-            setError(true);
-            setLoading(false);
-        });
-    }
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        if (!keyword.trim()) {
-            return;
-        }
-        search();
-        }
-
+  
     function handleKeywordChange(event) {
         setKeyword(event.target.value);
         setError(false);
@@ -62,6 +27,58 @@ export default function Dictionary() {
             setError(false);
         }
     }
+  
+    function handleResponse(response) {
+        if (response.data && response.data.meanings) {
+            setResults(response.data);
+            setError(false);
+        } else {
+            setResults(null);
+            setError(true);
+        }
+    }
+
+    function handleImageResponse (response) {
+        setPhotos(response.data.photos);
+    }
+
+    function search() {
+        setLoading(true);
+        setResults(null);
+        setError(false);
+
+        let apiKey = "a4adbd3ete0df14f5fa9050ddd7off63";
+        let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
+
+
+        axios.get(apiUrl).then(function (response) {
+            handleResponse(response);
+            setLoading(false);
+
+            let imageApiKey = "a4adbd3ete0df14f5fa9050ddd7off63";
+            let imageApiUrl =`https://api.shecodes.io/images/v1/search?query=${keyword}&key=${imageApiKey}`;
+        
+            axios.get(imageApiUrl).then(function (response){
+                handleImageResponse(response);
+            
+            });
+
+        })
+        .catch(function () {
+            setResults(null);
+            setError(true);
+            setLoading(false);
+        });       
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        if (!keyword.trim()) {
+            return;
+        }
+        search();
+        }
+
 
     return (
         <div className="Dictionary">
@@ -118,8 +135,9 @@ export default function Dictionary() {
                 </div>
             )}
 
-             {results && <Results results={results} />}
-           
+             {results && (
+                <Results results={results} photos={photos} />
+             )}
             </div>
         );
     } 

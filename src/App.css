@@ -1,7 +1,14 @@
+.App {
+    padding: 30px 0 100px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
 .App-header {
     text-align: center;
     color: #976736;
     font-family: "EB Garamond", serif;
+    margin: 20px 0 30px;
 }
 
 .App-header h1 {

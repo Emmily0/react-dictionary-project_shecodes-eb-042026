@@ -2,6 +2,7 @@ import React from "react";
 import Meaning from "./Meaning";
 import Phonetic from "./Phonetic";
 import "./Results.css";
+import Photos from "./Photos";
 
 export default function Results(props) {
 
@@ -18,11 +19,15 @@ export default function Results(props) {
                 
                 {props.results.meanings.map(function (meaning, index) {
                     return (
-                        <section key={index}>
+                        <section className="meaning-card" key={index}>
                         <Meaning meaning={meaning} />
                         </section>
                         );
                 })}
+
+            <section className="photos-card">
+                <Photos photos={props.photos} />
+            </section>
         </div>
     );
 } 

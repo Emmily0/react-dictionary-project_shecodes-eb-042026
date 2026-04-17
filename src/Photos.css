@@ -1,0 +1,10 @@
+.Photos {
+    padding: 20px;
+}
+
+.Photos img {
+    border-radius: 8px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
