@@ -29,6 +29,12 @@
     animation: fadeIn 0.3s ease 0.8s forwards;
 }
 
+.glass {
+    opacity: 0;
+    transform-origin: 310px 200px;
+    animation: glassAppear 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s forwards;
+}
+
 .focused-text {
     opacity: 0;
     animation: fadeIn 0.4s ease 1s forwards;
